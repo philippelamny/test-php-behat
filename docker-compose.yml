@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  servicetestbehat:
+    container_name: servicetestbehat
+    build:
+      context: ./docker
+      dockerfile: DockerFile
+    ports:
+      - 8083:80
+    volumes:
+      - ./:/var/www/html/:cached
